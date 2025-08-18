@@ -1,0 +1,6 @@
+n1 = eval(input("enter the first num : "))
+n2 = eval(input("enter the sercond num : "))
+
+answer = n1 + n2 
+
+print("the answer is ", answer )
