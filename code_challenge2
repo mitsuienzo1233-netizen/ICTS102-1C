@@ -1,0 +1,32 @@
+deposit = eval(input("enter the amount to deposit:"))
+
+print("her is a breakdown of your deposit", deposit )
+
+onek = deposit // 1000
+deposit = deposit - onek * 1000
+print("\n 1000 : " , onek)
+fiveh =  deposit // 500
+deposit = deposit - fiveh * 500
+print("\n 500 : " , fiveh)
+twoh =  deposit // 200
+deposit = deposit - twoh * 200
+print("\n 200 : " , twoh)
+oneh =  deposit // 100
+deposit = deposit - oneh * 100
+print("\n 100 : " , oneh)
+fivet =  deposit // 100
+deposit = deposit - fivet * 50
+print("\n 50 : " , fivet)
+twot =  deposit // 20
+deposit = deposit - twot * 20
+print("\n 20 : " , twot)
+ten = deposit // 10
+deposit = deposit - ten * 10
+print("\n 10 : " , ten)
+five = deposit // 5
+deposit = deposit - five * 5
+print("\n 5 : " , five)
+one = deposit // 1
+deposit = deposit - one * 1
+print("\n 1 : " , one)
+
