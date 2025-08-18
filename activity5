@@ -1,0 +1,2 @@
+something = input("input something ......")
+print("the data type of something is " , something)
