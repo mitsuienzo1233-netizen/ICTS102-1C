@@ -1,0 +1,12 @@
+from getpass import getpass
+
+username = "inzu"
+password = "pogi1433"
+
+u = input("username --> ")
+p = getpass("password -->")
+
+if (u == username) and (p == password) :
+	 print("Acess granted")
+else:
+	print("Acess denied")
