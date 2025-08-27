@@ -1,0 +1,17 @@
+a = 500
+print("the budget of day one " ,a)
+
+a -= 100
+print("the budget of day two ",a)
+
+a -= 100
+a += 20
+print("the budget of day three " ,a)
+
+a -= 100
+print("the budget of day four ",a)
+
+a -= 180
+print("the budget of day five ",a)
+
+print("the budget of last day ",a)
