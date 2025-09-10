@@ -1,0 +1,80 @@
+print("Welcome to Anime World")
+print("Select the genre:")
+print("1. Action")
+print("2. Romance")
+print("3. Comedy")
+
+ur_choice = input("Enter your choice (1/2/3): ")
+
+if ur_choice == "1":
+    print("Your chosen genre is Action")
+    print("Choose your era:")
+    print("1. Early 2000s")
+    print("2. 2010 and above")
+
+    ur_choice2 = input("Choose one (1/2): ")
+
+    if ur_choice2 == "1":
+        print("You chose Early 2000s")
+        print("Here are my recommendations:")
+        print("1. One Piece")
+        print("2. Naruto Shippuden")
+        print("3. Samurai X")
+        print("4. Hunter x Hunter")
+
+    elif ur_choice2 == "2":
+        print("You chose 2010 and above")
+        print("Here are my recommendations:")
+        print("1. My Hero Academia")
+        print("2. Sword Art Online")
+        print("3. Sakamoto Days")
+        print("4. Lazarus")
+
+elif ur_choice == "2":
+    print("Your chosen genre is Romance")
+    print("Choose your era:")
+    print("1. Early 2000s")
+    print("2. 2010 and above")
+
+    ur_choice3 = input("Choose one (1/2): ")
+
+    if ur_choice3 == "1":
+        print("You chose Early 2000s")
+        print("Here are my recommendations:")
+        print("1. Inuyasha")
+        print("2. Ah! My Goddess")
+        print("3. Love Hina")
+
+    elif ur_choice3 == "2":
+        print("You chose 2010 and above")
+        print("Here are my recommendations:")
+        print("1. Your Lie in April")
+        print("2. Your Name")
+        print("3. A Silent Voice")
+        print("4. Weathering With You")
+
+elif ur_choice == "3":
+    print("Your chosen genre is Comedy")
+    print("Choose your era:")
+    print("1. Early 2000s")
+    print("2. 2010 and above")
+
+    ur_choice4 = input("Choose one (1/2): ")
+
+    if ur_choice4 == "1":
+        print("You chose Early 2000s")
+        print("Here are my recommendations:")
+        print("1. Great Teacher Onizuka")
+        print("2. School Rumble")
+        print("3. Doraemon")
+
+    elif ur_choice4 == "2":
+        print("You chose 2010 and above")
+        print("Here are my recommendations:")
+        print("1. One Punch Man")
+        print("2. Saiki K")
+        print("3. KonoSuba")
+        print("4. Nichijou")
+
+else:
+    print("Invalid choice, please restart and try again.")
