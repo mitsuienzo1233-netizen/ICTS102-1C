@@ -1,0 +1,7 @@
+a = 33
+b = 44
+c = 22
+d = 11
+
+print( (a > b) or (c < d)
+print( (a > b) and ( c > d)
