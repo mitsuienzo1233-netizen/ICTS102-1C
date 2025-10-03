@@ -1,0 +1,4 @@
+for J in range (10,0,-1):
+        for S in range (J):
+            print("S", end= " ")
+        print( )        
