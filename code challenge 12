@@ -1,0 +1,15 @@
+n = e
+
+for v in range(1, n + 1):              
+    for a in range(n, v, -1):       
+        print(" ", end=" ")
+
+    for b in range(v, 1, -1):          
+        print(b, end=" ")
+
+    print(1, end=" ")                   
+
+    for c in range(2, v + 1):         
+        print(c, end=" ")
+
+    print() 
