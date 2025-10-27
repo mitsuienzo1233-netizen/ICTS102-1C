@@ -1,0 +1,13 @@
+input("Hi,my name is .." )
+print("++++++++++++++++++++++++++++++++++++++++++++++")
+print("\nODD NUMBER SELECTION, press 0 to stop loop.")
+print("\n++++++++++++++++++++++++++++++++++++++++++++++")
+
+a = True
+b = 0
+c = " "
+
+while a == True:
+    num = eval(input(" enter the numnber ...")) 
+    if num % 2 == 1:
+        print("the number is odd")
