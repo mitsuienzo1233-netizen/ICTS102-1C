@@ -1,0 +1,227 @@
+import os
+
+def clear():
+    os.system('cls')
+
+def wait():
+    input("\nPress Enter to continue...")
+
+# ===================== PRINT MENU =====================
+def print_menu(username):
+    while True:
+        clear()
+        choice = input(
+            "===== PRINTING IN PYTHON =====\n\n"
+            "A. Definition of print()\n"
+            "B. Examples of print()\n"
+            "X. Return to Main Menu\n\n"
+            "==============================\n=> "
+        ).lower().strip()
+
+        if choice == 'a':
+            clear()
+            print(
+                "======== DEFINITION OF print() ========\n\n"
+                "The print() function displays text or values\n"
+                "to the screen. It can print strings, numbers,\n"
+                "variables, and many other objects.\n\n"
+                "========================================\n"
+            )
+            wait()
+
+        elif choice == 'b':
+            print_examples(username)
+
+        elif choice == 'x':
+            break
+        else:
+            clear()
+            print("Invalid Input.. Please Try Again..")
+            wait()
+
+# EXAMPLES FOR PRINT
+def print_examples(username):
+    while True:
+        clear()
+        choice = input(
+            "===== EXAMPLES OF print() =====\n\n"
+            "A. Printing a message\n"
+            "B. Printing multiple objects\n"
+            "C. Printing variables\n"
+            "D. Concatenation using + operator\n"
+            "X. Return\n\n"
+            "==============================\n=> "
+        ).lower().strip()
+
+        clear()
+        if choice == 'a':
+            print(
+                "===== PRINTING A MESSAGE =====\n\n"
+                "Input:\n"
+                "  print(\"Hello World\")\n"
+                "  print(\"Pear\")\n\n"
+                "Output:\n"
+                "  Hello World\n"
+                "  Pear\n"
+            )
+            wait()
+
+        elif choice == 'b':
+            print(
+                "===== PRINTING MULTIPLE OBJECTS =====\n\n"
+                "Input:\n"
+                "  print(\"Hello\", \"World\")\n"
+                f"  print(\"Hi\", \"{username}\")\n\n"
+                "Output:\n"
+                "  Hello World\n"
+                f"  Hi {username}\n"
+            )
+            wait()
+
+        elif choice == 'c':
+            print(
+                "===== PRINTING VARIABLES =====\n\n"
+                "Input:\n"
+                "  x = \"Hello World\"\n"
+                "  print(x)\n\n"
+                "Output:\n"
+                "  Hello World\n"
+            )
+            wait()
+
+        elif choice == 'd':
+            print(
+                "===== CONCATENATED STRING =====\n\n"
+                "Input:\n"
+                f"  print(\"Hello \" + \"{username}\" + \"!\")\n\n"
+                "Output:\n"
+                f"  Hello {username}!\n"
+            )
+            wait()
+
+        elif choice == 'x':
+            break
+        else:
+            print("Invalid choice!")
+            wait()
+
+# ===================== VARIABLE MENU =====================
+def variable_menu():
+    while True:
+        clear()
+        choice = input(
+            "===== VARIABLES IN PYTHON =====\n\n"
+            "A. Definition of Variables\n"
+            "B. Examples of Variables\n"
+            "X. Return\n\n"
+            "==============================\n=> "
+        ).lower().strip()
+
+        clear()
+        if choice == 'a':
+            print(
+                "======== DEFINITION OF VARIABLE ========\n\n"
+                "A variable stores a value. It acts as a name\n"
+                "that points to data in memory.\n\n"
+                "========================================\n"
+            )
+            wait()
+
+        elif choice == 'b':
+            print(
+                "===== EXAMPLES OF VARIABLES =====\n\n"
+                "Input:\n"
+                "  greeting = \"Hello World\"\n"
+                "  number = 10 + 5\n"
+                "Output:\n"
+                "  Hello World\n"
+                "  15\n"
+            )
+            wait()
+
+        elif choice == 'x':
+            break
+        else:
+            print("Invalid input.")
+            wait()
+
+# ===================== MAIN PROGRAM =====================
+def main():
+    clear()
+    username = input("What is your name? ").title()
+
+    while True:
+        clear()
+        start = input("Are you opening the program? (Yes/No) => ").lower().strip()
+
+        if start == "yes":
+            break
+        elif start == "no":
+            clear()
+            print("See ya!")
+            return
+        else:
+            clear()
+            print("Invalid Input.. Try Again...")
+            wait()
+
+    # MAIN MENU
+    while True:
+        clear()
+        choice = input(
+            f"Hi {username}! Welcome to my Program!\n\n"
+            "=============== MAIN MENU ===============\n"
+            "A. Printing in Python\n"
+            "B. Variables in Python\n"
+            "C. Operators in Python\n"
+            "D. Conditional Statements\n"
+            "E. Loops in Python\n"
+            "F. Lists in Python\n"
+            "G. Functions in Python\n"
+            "X. Exit\n"
+            "=========================================\n\n=> "
+        ).lower().strip()
+
+        if choice == 'a':
+            print_menu(username)
+
+        elif choice == 'b':
+            variable_menu()
+
+        elif choice == 'c':
+            clear()
+            print("Operators menu coming soon!")
+            wait()
+
+        elif choice == 'd':
+            clear()
+            print("Conditionals menu coming soon!")
+            wait()
+
+        elif choice == 'e':
+            clear()
+            print("Loops menu coming soon!")
+            wait()
+
+        elif choice == 'f':
+            clear()
+            print("Lists menu coming soon!")
+            wait()
+
+        elif choice == 'g':
+            clear()
+            print("Functions menu coming soon!")
+            wait()
+
+        elif choice == 'x':
+            clear()
+            print("Goodbye!")
+            break
+
+        else:
+            clear()
+            print("Invalid Input.. Try Again..")
+            wait()
+
+# Run program
+main()
