@@ -1,0 +1,262 @@
+# ==========================================================
+# FINAL PROJECT IN COMPUTER PROGRAMMING
+# PYTHON FUNCTION LEARNING TOOL - INTERACTIVE MENU PROGRAM
+# ==========================================================
+
+# ==========================================================
+# INTRODUCTION
+# ==========================================================
+def intro():
+    print("==============================================")
+    print("      W E L C O M E   T O   Y O U R")
+    print("      PYTHON FUNCTION LEARNING TOOL")
+    print("==============================================")
+    name = input("Before we begin, what is your name? ")
+    print(f"\nHello, {name}! Let's start learning Python!\n")
+
+
+# ==========================================================
+# LESSON FUNCTIONS
+# ==========================================================
+def explain_print():
+    print("\n--- PRINT FUNCTION ---")
+    print("The print() function displays text or values on the screen.\n")
+
+    print("Example: print('Hello World')")
+    print("Output: Hello World\n")
+
+    print("Printing Numbers: print(25)")
+    print("Output: 25\n")
+
+    print("Printing Multiple Items: print('My age is', 18)")
+    print("Output: My age is 18\n")
+
+    print("Printing Results of Expressions: print(10 + 5)")
+    print("Output: 15\n")
+
+    print("Using Escape Characters (\\n for new line): print('Hello\\nPython')")
+    print("Output:\nHello\nPython\n")
+
+    print("Using f-strings (formatted strings):")
+    name = 'Ana'
+    print(f"print(f'Hello, {{name}}!') -> Output: Hello, {name}\n")
+
+
+def explain_input():
+    print("\n--- INPUT FUNCTION ---")
+    print("The input() function allows the user to enter data.\n")
+
+    name = input("Enter your name: ")
+    print(f"You typed: {name}\n")
+
+    age = int(input("Enter your age: "))
+    print(f"Age as integer: {age}\n")
+
+    color = input("Favorite color: ")
+    print(f"You like {color}\n")
+    
+    print(f"Hello {name} and your are {age} years old and you fav color is {color} great!!")
+
+def explain_eval():
+    print("\n--- EVAL FUNCTION ---")
+    print("The eval() function evaluates a string as a Python expression.\n")
+
+    print("Example: x = eval('10 + 5')")
+    print("Output:", eval('10 + 5'), "\n")
+
+    a, b = 7, 3
+    print("Example with variables: a = 7, b = 3, eval('a * b')")
+    print("Output:", eval('a * b'), "\n")
+
+    expr = '2 * (3 + 4)'
+    print(f"Evaluating expression: {expr}")
+    print("Output:", eval(expr), "\n")
+
+    # Safe user input evaluation
+    try:
+        user_input = input("Enter an expression to evaluate (e.g., 10 / 2): ")
+        print("Output:", eval(user_input))
+    except Exception as e:
+        print("Invalid expression!", e)
+    print()
+
+
+def explain_int():
+    print("\n--- int() FUNCTION ---")
+    print("Converts a value into an integer.\n")
+
+    print("int('25') ->", int('25'))
+    print("int(12.99) ->", int(12.99))
+
+    age = int(input("Enter your age: "))
+    print(f"Age as integer: {age}\n")
+
+    print("Arithmetic example: int('10') + int('5') =", int('10') + int('5'), "\n")
+
+def explain_for_loop():
+    print("\n--- FOR LOOP ---")
+    print("A for loop repeats a block of code a specific number of times or over a sequence.\n")
+
+    print("Basic Example with range():")
+    print("for i in range(3):")
+    print("    print(i)")
+    print("Output:")
+    for i in range(3):
+        print(i)
+
+    print("\nIterating over a list:")
+    print("fruits = ['apple', 'banana', 'mango']")
+    print("for fruit in fruits:")
+    print("    print(fruit)")
+    fruits = ['apple', 'banana', 'mango']
+    for fruit in fruits:
+        print(fruit)
+
+    print("\nUsing for loop with arithmetic inside:")
+    print("for i in range(1, 4):")
+    print("    print(i * 2)")
+    print("Output:")
+    for i in range(1, 4):
+        print(i * 2)
+
+def explain_if_else():
+    print("\n--- IF / ELSE / ELIF ---")
+    print("The if statement allows you to execute code only if a condition is True.")
+    print("The else statement executes code if the condition is False.")
+    print("The elif statement allows you to check multiple conditions.\n")
+
+    # Simple examples
+    x = 20
+    if x > 10:
+        print("Example 1: x = 20 -> Output: Big number")
+
+    x = 5
+    if x > 10:
+        print("Big number")
+    else:
+        print("Example 2: x = 5 -> Output: Small number")
+
+    x = 15
+    if x > 20:
+        print("Very big")
+    elif x > 10:
+        print("Example 3: x = 15 -> Output: Big")
+    else:
+        print("Small")
+
+    x = 8
+    if x > 0:
+        if x % 2 == 0:
+            print("Nested if example: x = 8 -> Output: Positive even number")
+    
+    print("\n--- Try it yourself ---")
+    try:
+        user_number = int(input("Enter a number: "))
+        if user_number > 0:
+            print("Your number is positive")
+            if user_number % 2 == 0:
+                print("It is also even")
+            else:
+                print("It is odd")
+        elif user_number < 0:
+            print("Your number is negative")
+        else:
+            print("Your number is zero")
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
+    
+    print("\n--- End of IF / ELSE / ELIF Lesson ---\n")
+
+def explain_list():
+    print("\n--- LISTS ---")
+    fruits = ['apple', 'banana', 'mango']
+    print("Creating a list:", fruits)
+
+    print("Accessing first item:", fruits[0])
+    fruits[1] = 'orange'
+    print("Modified list:", fruits)
+
+    fruits.append('grape')
+    print("After append:", fruits)
+
+    fruits.remove('apple')
+    print("After remove:", fruits)
+
+    print("Iterating through list:")
+    for fruit in fruits:
+        print(fruit)
+    print()
+
+
+def explain_while_true():
+    print("\n--- WHILE TRUE LOOP ---")
+    print("Runs continuously until 'break' is used.")
+    while True:
+        print("Looping once")
+        break
+    print()
+
+
+def explain_dictionary():
+    print("\n--- DICTIONARIES ---")
+    student = {'name': 'Ana', 'age': 18}
+    print("Example dictionary:", student)
+    print("Accessing value by key: student['name'] ->", student['name'])
+    student['age'] = 19
+    print("Modified dictionary:", student, "\n")
+
+
+# ==========================================================
+# MAIN LEARNING MENU
+# ==========================================================
+def learning_menu():
+    while True:
+        print("==============================================")
+        print("        PYTHON LEARNING CENTER MENU")
+        print("==============================================")
+        print("1 - Print Function")
+        print("2 - Input Function")
+        print("3 - Eval Function")
+        print("4 - int() Function")
+        print("5 - If / Else / Elif")
+        print("6 - For Loop")
+        print("7 - List Function")
+        print("8 - While True Loop")
+        print("9 - Dictionary Function")
+        print("10 - Exit Program")
+        print("==============================================")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            explain_print()
+        elif choice == "2":
+            explain_input()
+        elif choice == "3":
+            explain_eval()
+        elif choice == "4":
+            explain_int()
+        elif choice == "5":
+            explain_if_else()
+        elif choice == "6":
+            explain_for_loop()
+        elif choice == "7":
+            explain_list()
+        elif choice == "8":
+            explain_while_true()
+        elif choice == "9":
+            explain_dictionary()
+        elif choice == "10":
+            confirm = input("\nAre you sure you want to exit? (Y/N): ").lower()
+            if confirm == "y":
+                print("\nThank you for using the Python Learning Tool! Goodbye!\n")
+                break
+        else:
+            print("\nInvalid choice. Please try again.\n")
+
+
+# ==========================================================
+# PROGRAM START
+# ==========================================================
+intro()
+learning_menu()
