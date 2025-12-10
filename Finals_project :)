@@ -1,0 +1,118 @@
+# ============================================
+
+library = []  # A list to store book dictionaries
+
+def intro(): 
+    print("====================================")
+    print("   WELCOME TO THE DIGITAL MINI LIBRARY")
+    print("====================================")
+    name = input("Hey before start, what is your name? ")
+    print(f"\nHello, {name}! Nice to meet you!")
+    print("Enjoy  My Digital Mini Library.\n")
+
+def add_book():
+    print("\n--- ADD A BOOK ---")
+    title = input("Enter book title: ")
+    author = input("Enter author name: ")
+    year = input("Enter year published: ")
+
+    book = {
+        "title": title,
+        "author": author,
+        "year": year
+    }
+
+    library.append(book)
+    print(f"\n✓ '{title}' has been added to the library!")
+
+def view_books():
+    print("\n--- LIST OF BOOKS ---")
+    if not library:
+        print("No books available.\n")
+        return
+
+    for i, book in enumerate(library, 1):
+        print(f"{i}. {book['title']} by {book['author']} ({book['year']})")
+
+def search_book():
+    print("\n--- SEARCH FOR A BOOK ---")
+    keyword = input("Enter a title or author to search: ").lower()
+
+    found = False
+    for book in library:
+        if keyword in book['title'].lower() or keyword in book['author'].lower():
+            print(f"\n✓ Found: {book['title']} by {book['author']} ({book['year']})")
+            found = True
+
+    if not found:
+        print("\nNo matching books found.")
+
+def remove_book():
+    print("\n--- REMOVE A BOOK ---")
+    view_books()
+
+    if not library:
+        return
+
+    try:
+        book_number = int(input("Enter the number of the book to remove: "))
+        removed = library.pop(book_number - 1)
+        print(f"\n✓ '{removed['title']}' has been removed.")
+    except (ValueError, IndexError):
+        print("Invalid selection.")
+
+def save_to_file():
+    print("\n--- SAVING TO FILE ---")
+    with open("library_data.txt", "w") as file:
+        for book in library:
+            file.write(f"{book['title']}|{book['author']}|{book['year']}\n")
+    print("✓ Library saved to library_data.txt")
+
+def load_from_file():
+    print("\n--- LOADING FROM FILE ---")
+    try:
+        with open("library_data.txt", "r") as file:
+            for line in file:
+                title, author, year = line.strip().split("|")
+                library.append({"title": title, "author": author, "year": year})
+        print("✓ Library loaded successfully!")
+    except FileNotFoundError:
+        print("No save file found.")
+
+def menu():
+    while True:
+        print("\n==============================")
+        print("     DIGITAL MINI LIBRARY     ")
+        print("==============================")
+        print("1. Add Book")
+        print("2. View Books")
+        print("3. Search Book")
+        print("4. Remove Book")
+        print("5. Save Library")
+        print("6. Load Library")
+        print("7. Exit")
+        print("==============================")
+
+        choice = input("Enter your choice (1-7): ")
+
+        if choice == "1":
+            add_book()
+        elif choice == "2":
+            view_books()
+        elif choice == "3":
+            search_book()
+        elif choice == "4":
+            remove_book()
+        elif choice == "5":
+            save_to_file()
+        elif choice == "6":
+            load_from_file()
+        elif choice == "7":
+            print("\nThank you for using the Digital Mini Library!\n")
+            break
+        else:
+            print("Invalid option. Please try again.")
+
+
+intro()
+menu()
